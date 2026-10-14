@@ -1,9 +1,11 @@
 import sys
 import unicodedata
+from pathlib import Path
 
 import openpyxl
 
-DEFAULT_FILE = r"C:\Users\kikaku9\Desktop\4-2-2-2.xlsx"
+# このプログラムと同じフォルダにある Excel ファイルを読む
+DEFAULT_FILE = Path(__file__).resolve().parent / "4-2-2-2.xlsx"
 
 
 def width(text):
@@ -47,7 +49,7 @@ def print_table(headers, rows, aligns):
 
 
 def main():
-    path = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_FILE
+    path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_FILE
     scores = load_scores(path)
 
     stats = []
@@ -65,7 +67,7 @@ def main():
         for rank, (name, count, avg, hi, lo) in enumerate(stats, 1)
     ]
 
-    print(f"\n■ 参加者別スコア集計（{path}）\n")
+    print(f"\n■ 参加者別スコア集計（{path.name}）\n")
     print_table(
         ["順位", "名前", "件数", "平均", "最高点（科目）", "最低点（科目）"],
         rows,
