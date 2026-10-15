@@ -1,1 +1,5 @@
 __pycache__/
+
+# Google ドライブ API の鍵とログイン情報（公開しないこと）
+credentials.json
+token.json
