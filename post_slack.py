@@ -35,11 +35,15 @@ def load_config():
     return config
 
 
-def post_message(token, channel, text):
+def post_message(token, channel, text, username=None, icon_emoji=None):
+    payload = {"channel": channel, "text": text}
+    if username:
+        # 投稿者名とアイコンを変える（chat:write.customize の権限が必要）
+        payload.update({"username": username, "icon_emoji": icon_emoji})
     res = requests.post(
         POST_URL,
         headers={"Authorization": f"Bearer {token}"},
-        json={"channel": channel, "text": text},
+        json=payload,
         timeout=30,
     )
     data = res.json()
