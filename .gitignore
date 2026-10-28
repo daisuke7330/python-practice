@@ -7,3 +7,5 @@ token_meet.json
 zoom_credentials.json
 token_gmail.json
 token_youtube.json
+slack_config.json
+discord_config.json
