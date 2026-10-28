@@ -15,3 +15,5 @@ line_config.json
 gemini_config.json
 sheets_config.json
 token_sheets.json
+sample_meeting.wav
+minutes_*.txt
