@@ -11,3 +11,4 @@ slack_config.json
 discord_config.json
 youtube_*.xlsx
 .vscode/
+line_config.json
