@@ -1,0 +1,26 @@
+{
+  "_説明": "定例メールのひな形（見本）。宛先は架空のアドレス。本番は同じ形で mail_templates.json を作る（GitHub には上げない）",
+  "媒体掲載予定": {
+    "to": ["member1@example.com", "member2@example.com", "member3@example.com"],
+    "cc": [],
+    "subject": "媒体掲載予定",
+    "body": "皆様\n\nお疲れ様です。\n今週末の出稿予定を添付致しました。\n{extra}\n\nお手数ですがご確認よろしくお願いいたします。\n\n{sign}",
+    "sign": "署名",
+    "attach": {"folder": "~/Desktop", "pattern": "掲載予定_*.xlsx"}
+  },
+  "商材のご連絡": {
+    "to": ["agency@example.com"],
+    "cc": ["agency2@example.com", "member1@example.com"],
+    "subject": "{month}月第{week}週の商材のご連絡",
+    "body": "ご担当者様\n\nお世話になっております。\n{from}～{to}掲載分の商材につきまして、添付ファイルをご参照ください。\n{extra}\n\nお手数ですがご確認よろしくお願いいたします。\n\n{sign}",
+    "sign": "署名",
+    "attach": {"folder": "~/Desktop", "pattern": "*_商材.zip"}
+  },
+  "媒体速報": {
+    "to": ["member1@example.com", "member2@example.com"],
+    "cc": [],
+    "subject": "媒体速報",
+    "body": "皆様\n\nお疲れ様です。\n媒体速報を添付いたします。\n{extra}\n\nお手数ですが、ご確認よろしくお願いいたします。\n\n{sign}",
+    "sign": "署名"
+  }
+}
