@@ -19,3 +19,4 @@ sample_meeting.wav
 minutes_*.txt
 amazon_sales_config.json
 mail_templates.json
+token_todo*.json
